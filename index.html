@@ -1,0 +1,340 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080d27">
+  <meta name="description" content="BEYOND EARTH - An interactive Junior Astronaut Mission Trainer by ANA.NASA⁵ for NASA Space Apps Challenge 2026.">
+  <title>BEYOND EARTH | ANA.NASA⁵</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="space-background" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="stars stars-two"></div>
+  </div>
+
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="ANA.NASA home">
+      <img src="https://i.ibb.co/mr8hPm1g/1000302755-2.jpg" alt="ANA.NASA team logo" class="team-logo">
+      <span class="header-team-name">ANA.NASA⁵</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">☰</button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">HOME</a>
+      <a href="#explore">DESTINATIONS</a>
+      <a href="#mission">MISSION TRAINER</a>
+      <a href="#about">ABOUT US</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="hero-label">NASA SPACE APPS CHALLENGE 2026</p>
+        <h1>BEYOND <span>EARTH</span></h1>
+        <p class="hero-subtitle">YOUR JOURNEY TO BECOMING A JUNIOR ASTRONAUT STARTS HERE.</p>
+        <p class="hero-description">
+          Explore mysterious worlds, discover the challenges of space exploration,
+          and build your own sustainable space mission.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#explore" class="primary-button">EXPLORE WORLDS</a>
+          <a href="#mission" class="secondary-button">START YOUR MISSION</a>
+        </div>
+
+        <div class="hero-team-brand">
+          <img src="https://i.ibb.co/mr8hPm1g/1000302755-2.jpg" alt="ANA.NASA team emblem" class="home-team-logo">
+          <span>CREATED BY ANA.NASA⁵</span>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="solar-system">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+          <div class="hero-planet"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro-section">
+      <div class="section-heading">
+        <p class="section-label">THE UNIVERSE IS WAITING</p>
+        <h2>DISCOVER THE <span>UNKNOWN</span></h2>
+        <p>
+          Four extraordinary destinations. Four unique environments.
+          One mission: learn how humans could explore beyond Earth.
+        </p>
+      </div>
+
+      <div class="quick-stats">
+        <div class="stat-card">
+          <span class="stat-number">04</span>
+          <span class="stat-label">DESTINATIONS</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">10</span>
+          <span class="stat-label">QUESTIONS PER WORLD</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">01</span>
+          <span class="stat-label">ASTRONAUT MISSION</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="explore-section" id="explore">
+      <div class="section-heading">
+        <p class="section-label">CHOOSE YOUR DESTINATION</p>
+        <h2>EXPLORE NEW <span>WORLDS</span></h2>
+        <p>
+          Select a destination to discover its environment, scientific facts,
+          survival challenges, and your astronaut knowledge quiz.
+        </p>
+      </div>
+
+      <div class="world-grid">
+
+        <article class="world-card mars-card">
+          <div class="world-card-image mars-image">
+            <span class="world-tag">THE RED PLANET</span>
+          </div>
+          <div class="world-card-content">
+            <h3>MARS</h3>
+            <p>A rocky world with ancient river valleys, giant volcanoes, and a thin atmosphere.</p>
+            <button class="world-button" data-world="mars">EXPLORE MARS</button>
+          </div>
+        </article>
+
+        <article class="world-card venus-card">
+          <div class="world-card-image venus-image">
+            <span class="world-tag">THE HOTTEST PLANET</span>
+          </div>
+          <div class="world-card-content">
+            <h3>VENUS</h3>
+            <p>A world of extreme heat, crushing atmospheric pressure, and thick clouds.</p>
+            <button class="world-button" data-world="venus">EXPLORE VENUS</button>
+          </div>
+        </article>
+
+        <article class="world-card europa-card">
+          <div class="world-card-image europa-image">
+            <span class="world-tag">OCEAN WORLD</span>
+          </div>
+          <div class="world-card-content">
+            <h3>EUROPA</h3>
+            <p>Jupiter's icy moon may hide a vast salty ocean beneath its frozen surface.</p>
+            <button class="world-button" data-world="europa">EXPLORE EUROPA</button>
+          </div>
+        </article>
+
+        <article class="world-card titan-card">
+          <div class="world-card-image titan-image">
+            <span class="world-tag">SATURN'S MYSTERIOUS MOON</span>
+          </div>
+          <div class="world-card-content">
+            <h3>TITAN</h3>
+            <p>A fascinating moon with a thick atmosphere, methane lakes, and a complex landscape.</p>
+            <button class="world-button" data-world="titan">EXPLORE TITAN</button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="worldMount" class="dynamic-section" aria-live="polite"></section>
+
+    <section class="mission-section" id="mission">
+      <div class="mission-content">
+        <p class="section-label">YOUR NEXT CHALLENGE</p>
+        <h2>JUNIOR ASTRONAUT <span>MISSION TRAINER</span></h2>
+        <p>
+          Could you help humans survive beyond Earth?
+          Make decisions about life support, water, food, energy,
+          radiation protection, and temperature control.
+        </p>
+
+        <div class="mission-features">
+          <div class="mission-feature">
+            <span class="feature-symbol">O₂</span>
+            <span>OXYGEN & LIFE SUPPORT</span>
+          </div>
+          <div class="mission-feature">
+            <span class="feature-symbol">H₂O</span>
+            <span>WATER MANAGEMENT</span>
+          </div>
+          <div class="mission-feature">
+            <span class="feature-symbol">⚡</span>
+            <span>POWER GENERATION</span>
+          </div>
+          <div class="mission-feature">
+            <span class="feature-symbol">🛡</span>
+            <span>RADIATION PROTECTION</span>
+          </div>
+        </div>
+
+        <button class="primary-button" id="startMissionButton">START MISSION TRAINER</button>
+      </div>
+    </section>
+
+    <section id="missionMount" class="dynamic-section" aria-live="polite"></section>
+
+    <section class="about-section" id="about">
+      <div class="section-heading">
+        <p class="section-label">MEET THE TEAM</p>
+        <h2>THE PEOPLE BEHIND <span>THE MISSION</span></h2>
+        <p>
+          We are a team of students passionate about science,
+          technology, creativity, and space exploration.
+        </p>
+      </div>
+
+      <div class="about-team-brand">
+        <img src="https://i.ibb.co/mr8hPm1g/1000302755-2.jpg" alt="ANA.NASA team logo" class="team-logo about-logo">
+        <h3>ANA.NASA⁵</h3>
+        <p>NASA SPACE APPS CHALLENGE 2026</p>
+      </div>
+
+      <div class="team-members">
+
+        <article class="team-member">
+          <span class="member-number">01</span>
+          <h3>Habiba Elsayed Ali</h3>
+          <a href="mailto:habibaelsayed288@gmail.com">habibaelsayed288@gmail.com</a>
+        </article>
+
+        <article class="team-member">
+          <span class="member-number">02</span>
+          <h3>Hadeer Mahmoud Ebrahim</h3>
+          <a href="mailto:mahmoudhadeer638@gmail.com">mahmoudhadeer638@gmail.com</a>
+        </article>
+
+        <article class="team-member">
+          <span class="member-number">03</span>
+          <h3>Jana Hammoda Rezk</h3>
+          <a href="mailto:Jana.hammoda224252@gmail.com">Jana.hammoda224252@gmail.com</a>
+        </article>
+
+        <article class="team-member">
+          <span class="member-number">04</span>
+          <h3>Malak Fathy Eid</h3>
+          <a href="mailto:malakfathi20110@gmail.com">malakfathi20110@gmail.com</a>
+        </article>
+
+        <article class="team-member">
+          <span class="member-number">05</span>
+          <h3>Sondos Mohammed Ebrahim</h3>
+          <a href="mailto:sondos.1825526@stemksheikh.moe.edu.eg">sondos.1825526@stemksheikh.moe.edu.eg</a>
+        </article>
+
+      </div>
+
+      <div class="team-school">
+        <p>OUR SCHOOL</p>
+        <h3>KAFR EL-SHEIKH STEM SCHOOL</h3>
+      </div>
+
+      <div class="nasa-identity">
+        <div class="nasa-wordmark">NASA</div>
+        <p>EXPLORE. DISCOVER. INSPIRE.</p>
+        <p class="nasa-disclaimer">
+          This is an independent student project created for the NASA Space Apps
+          Challenge 2026. It is not an official NASA website and is not affiliated
+          with or endorsed by NASA.
+        </p>
+      </div>
+
+      <div class="creator-card">
+        <p class="section-label">WEBSITE CREATOR</p>
+        <h3>Habiba Elsayed Ali</h3>
+        <div class="creator-contact">
+          <p>
+            <span>EMAIL</span>
+            <a href="mailto:habibaelsayed288@gmail.com">habibaelsayed288@gmail.com</a>
+          </p>
+          <p>
+            <span>PHONE</span>
+            <a href="tel:01032259982">01032259982</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="references-section" id="references">
+      <div class="section-heading">
+        <p class="section-label">LEARN FROM REAL SCIENCE</p>
+        <h2>NASA <span>RESOURCES</span></h2>
+        <p>
+          Explore official NASA information, scientific discoveries,
+          images, and space missions.
+        </p>
+      </div>
+
+      <div class="reference-links">
+
+        <a href="https://science.nasa.gov/" target="_blank" rel="noopener">
+          <span class="reference-icon">✦</span>
+          <span>
+            <strong>NASA SCIENCE</strong>
+            <small>Discover NASA's scientific research and missions.</small>
+          </span>
+          <span class="reference-arrow">↗</span>
+        </a>
+
+        <a href="https://solarsystem.nasa.gov/" target="_blank" rel="noopener">
+          <span class="reference-icon">◉</span>
+          <span>
+            <strong>NASA SOLAR SYSTEM EXPLORATION</strong>
+            <small>Explore planets, moons, and our solar system.</small>
+          </span>
+          <span class="reference-arrow">↗</span>
+        </a>
+
+        <a href="https://images.nasa.gov/" target="_blank" rel="noopener">
+          <span class="reference-icon">▣</span>
+          <span>
+            <strong>NASA IMAGE AND VIDEO LIBRARY</strong>
+            <small>Explore NASA's image and video collections.</small>
+          </span>
+          <span class="reference-arrow">↗</span>
+        </a>
+
+        <a href="https://www.nasa.gov/" target="_blank" rel="noopener">
+          <span class="reference-icon">🚀</span>
+          <span>
+            <strong>NASA OFFICIAL WEBSITE</strong>
+            <small>News, discoveries, and space exploration updates.</small>
+          </span>
+          <span class="reference-arrow">↗</span>
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <img src="https://i.ibb.co/mr8hPm1g/1000302755-2.jpg" alt="ANA.NASA team logo">
+      <span>ANA.NASA⁵</span>
+    </div>
+
+    <p>BEYOND EARTH — YOUR JOURNEY STARTS HERE.</p>
+    <p class="footer-small">
+      Created for NASA Space Apps Challenge 2026.
+      Independent student project. Not an official NASA product.
+    </p>
+    <p class="copyright">© 2026 ANA.NASA⁵</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
